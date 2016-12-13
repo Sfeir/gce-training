@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-1-service
+  labels:
+    app: wordpress-1
+spec:
+  type: LoadBalancer
+  ports:
+    # The port that will be exposed by the service.
+  - port: 80
+    # The port to access on the pods targeted by the service.
+    targetPort: 80
+  selector:
+    app: wordpress-1
