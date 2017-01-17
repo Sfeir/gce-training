@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web-server2
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: web-server2
+    spec:
+      containers:
+      - name: web-server-container2
+        image: eu.gcr.io/PROJECT_ID/web:v2
+        ports:
+        - containerPort: 80
+kind: Service
+metadata:
+  name: web-server-service2
+  labels:
+    name: web-server2
+spec:
+  type: LoadBalancer
+  ports:
+    # The port that will be exposed by the service.
+  - port: 80
+  selector:
+    app: web-server2
