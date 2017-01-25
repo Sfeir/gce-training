@@ -3,9 +3,25 @@
 
 <head>
 	<title>Démo</title>
+	<meta charset="UTF-8">
   <style>
+
+    .container {
+	width: 600px;
+    }
+
     .blink {
       animation: blinker 1s linear infinite;
+      color: red;
+      font: bold;
+      float: left;
+    }
+
+    .blink2 {
+      animation: blinker 0.6s linear infinite;
+      color: blue;
+      font: bold;
+      float: right;
     }
 
     @keyframes blinker {  
@@ -15,7 +31,25 @@
 </head>
 
 <body>
-  <span class="blink">HELLO</span>
+<div class="container">
+<pre class="blink">
+ __    __   _______  __       __        ______   
+|  |  |  | |   ____||  |     |  |      /  __  \  
+|  |__|  | |  |__   |  |     |  |     |  |  |  | 
+|   __   | |   __|  |  |     |  |     |  |  |  | 
+|  |  |  | |  |____ |  `----.|  `----.|  `--'  | 
+|__|  |__| |_______||_______||_______| \______/  
+</pre>   
+
+<pre class="blink2">
+____    __    ____  ______   .______       __       _______  
+\   \  /  \  /   / /  __  \  |   _  \     |  |     |       \ 
+ \   \/    \/   / |  |  |  | |  |_)  |    |  |     |  .--.  |
+  \            /  |  |  |  | |      /     |  |     |  |  |  |
+   \    /\    /   |  `--'  | |  |\  \----.|  `----.|  '--'  |
+    \__/  \__/     \______/  | _| `._____||_______||_______/ 
+</pre>   
+</div>
 </body>
 </html>
 
